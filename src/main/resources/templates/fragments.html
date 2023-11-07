@@ -26,6 +26,27 @@
         </div>
     </div>
 </div>
+<div th:fragment="display-loop">
+    <th:block th:each="job : ${jobs}">
+        <table id="job-listing">
+            <tr>
+                <th >Employer</th>
+                <th >Location</th>
+                <th>Position Type</th>
+                <th >Core Competency</th>
+            </tr>
+            <tr>
+                <th th:text="${job.employer}" > </th>
+                <th th:text="${job.location}"></th>
+                <th  th:text="${job.positionType}"></th>
+                <th th:text="${job.coreCompetency}"></th>
+            </tr>
+
+        </table>
+    </th:block>
+
+</div>
+
 
 </body>
 </html>

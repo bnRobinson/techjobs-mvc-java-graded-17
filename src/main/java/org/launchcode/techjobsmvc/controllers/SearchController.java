@@ -39,6 +39,7 @@ public class SearchController {
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
+
         return jobs;
     }
 }
